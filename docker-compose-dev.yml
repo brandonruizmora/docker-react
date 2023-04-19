@@ -1,0 +1,13 @@
+version: "3.1"
+
+services: 
+  miapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: miapp
+    stdin_open: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./miapp:/home/apps/miapp

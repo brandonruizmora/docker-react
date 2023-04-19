@@ -1,0 +1,11 @@
+FROM node:18
+
+RUN mkdir -p /home/apps/miapp
+
+WORKDIR /home/apps/miapp
+
+RUN npm i -g nodemon
+
+EXPOSE 3000
+
+CMD ["nodemon", "--exec", "npm", "start"]
